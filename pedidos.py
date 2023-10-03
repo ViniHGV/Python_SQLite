@@ -5,9 +5,8 @@ conector = sqlite3.connect('lojaPecas.db')
 cursor = conector.cursor()
 
 sql = """
-  create table pedidos(
+  create table if not exists pedidos(
   id integer primary key autoincrement,
-  numNotaFiscal STRING,
   valorTotal STRING,
   dataRealizacao DATETIME,
   mercadorias STRING)
@@ -15,8 +14,8 @@ sql = """
 cursor.execute(sql)
 
 sql = """
-  insert into pedidos (numNotaFiscal, valorTotal, mercadorias)
-  values ('1235124', 'R$ 150,00', 'Chave de Fenda')
+  insert into pedidos ( valorTotal, mercadorias)
+  values ('R$ 150,00', 'Chave de Fenda')
 """
 cursor.execute(sql)
 
