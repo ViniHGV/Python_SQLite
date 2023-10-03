@@ -6,7 +6,7 @@ cursor = conector.cursor()
 
 sql = """
   create table if not exists pedidos(
-  id integer primary key autoincrement,
+  numNotaFiscal integer primary key autoincrement,
   valorTotal STRING,
   dataRealizacao DATE,
   mercadorias STRING,
