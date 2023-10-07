@@ -9,7 +9,7 @@ sql = """
   codigoMercadoria integer primary key autoincrement,
   descricao string,
   preco numeric,
-  qtdEstoque integer,
+  qtdEstoque integer)
 """
 cursor.execute(sql)
 

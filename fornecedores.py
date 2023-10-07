@@ -6,12 +6,12 @@ cursor = conect.cursor()
 
 sql = """
   create table fornecedores (
-  codInterno integer primary key autoincrement,
+  codigoInterno integer primary key autoincrement,
   razaoSocial string,
   nomeFantasia string,
   cnpj string,
   endereco string,
-  telefoneCentral string,
+  telefoneCentral string)
 """
 cursor.execute(sql)
 

@@ -12,12 +12,12 @@ cursor = conect.cursor()
 
 sql = """
   create table if not exists contatoFornecedor(
-  id integer primary key autoincrement,
-  nome string,
-  telefone string,
-  email string,
-  codInterno integer,
-  foreign key (codInterno) references fornecedores(codInterno))
+  idContato integer primary key autoincrement,
+  codigoInterno integer,
+  nomeContato string,
+  emailContato string,
+  telefoneContato string,
+  foreign key (codigoInterno) references fornecedores(codigoInterno))
 """
 cursor.execute(sql)
 
