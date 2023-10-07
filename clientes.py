@@ -5,15 +5,15 @@ conector = sqlite3.connect("lojaPecas.db")
 cursor = conector.cursor()
 
 sql = """
-  create table if not exists clientes  (
+  create table if not exists cliente(
   id integer primary key autoincrement,
   nome string,
   RG string,
   CPF string,
   endereco string,
   email string,
-  fixo string,
-  celular string)
+  numTelefone string,
+  numCelular string)
 """
 cursor.execute(sql)
 

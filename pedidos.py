@@ -6,18 +6,11 @@ cursor = conector.cursor()
 
 sql = """
   create table if not exists pedidos(
-  numNotaFiscal integer primary key autoincrement,
-  valorTotal STRING,
-  dataRealizacao DATE,
-  mercadorias STRING,
+  notaFiscal integer primary key autoincrement,
+  valorTotal numeric,
+  dataRealizacao date,
   idCliente integer,
   foreign key (idCliente) references clientes(id))
-"""
-cursor.execute(sql)
-
-sql = """
-  insert into pedidos ( valorTotal, mercadorias, idCliente )
-  values ('R$ 150,00', 'Chave de Fenda', 1)
 """
 cursor.execute(sql)
 
