@@ -7,9 +7,9 @@ cursor = conector.cursor()
 sql = """
   create table if not exists pedidos(
   notaFiscal integer primary key autoincrement,
+  idCliente integer,
   valorTotal numeric,
   dataPedido date,
-  idCliente integer,
   foreign key (idCliente) references clientes(id))
 """
 cursor.execute(sql)

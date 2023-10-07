@@ -17,12 +17,6 @@ sql = """
 """
 cursor.execute(sql)
 
-sql = """
-  insert into clientes (nome, rg, cpf, endereco, email, numTelefone, numCelular)
-  values ('vinicius', '576558837', '57425932873', 'rua athos palma', 'ixxvinicius', '56742747', '914186155')
-"""
-cursor.execute(sql)
-
 conector.commit()
 cursor.close()
 conector.close()
