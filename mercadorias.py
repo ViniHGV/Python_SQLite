@@ -13,6 +13,18 @@ sql = """
 """
 cursor.execute(sql)
 
+sql = """
+  insert into mercadorias (descricao, preco, quantidadeEstoque)
+  values ('Mouse', 59.99, 10)
+"""
+cursor.execute(sql)
+
+sql = """
+  insert into mercadorias (descricao, preco, quantidadeEstoque)
+  values ('Teclado Gamer', 259.99, 15)
+"""
+cursor.execute(sql)
+
 conect.commit()
 cursor.close()
 conect.close()

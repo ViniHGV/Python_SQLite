@@ -15,6 +15,26 @@ sql = """
 """
 cursor.execute(sql)
 
+sql = """
+  insert into mercadoriasPedido(notaFiscal, codigoMercadoria, quantidade)
+  values (1, 1, 2)
+"""
+cursor.execute(sql)
+
+sql="""
+  UPDATE pedidos 
+  SET valorTotal = (
+  SELECT preco
+  FROM mercadorias 
+  WHERE codigoMercadoria = 1
+  ) * (select quantidade
+  FROM mercadoriasPedido
+  WHERE codigoMercadoria = 1
+  )
+  WHERE(notaFiscal == 1)
+"""
+cursor.execute(sql)
+
 conector.commit()
 cursor.close()
 conector.close()

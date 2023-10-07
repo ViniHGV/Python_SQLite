@@ -15,8 +15,14 @@ sql = """
 """
 cursor.execute(sql)
 
+sql="""
+  insert into listaContatoFornecedor(codigoInterno, nomeContato, emailContato, telefoneContato)
+  values(1, 'Contato Fornecedora Multilazer', 'ContatoMultilazer@gmail.com', '15423521')
+"""
+cursor.execute(sql)
+
 conect.commit()
 cursor.close()
 conect.close()
 
-print("\n\nCriação da tabela Contatos fonecedores realizada com sucesso!!🚀\n\n")
+print("Criação da tabela Contatos fonecedores realizada com sucesso!!🚀")

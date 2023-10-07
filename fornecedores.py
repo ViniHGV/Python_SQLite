@@ -15,6 +15,12 @@ sql = """
 """
 cursor.execute(sql)
 
+sql="""
+  insert into fornecedores(razaoSocial, nomeFantasia, cnpj, endereco, telefoneCentral)
+  values('Multilazer','Multilazer', '1445214521', 'Rua Adolfo', '12456215')
+"""
+cursor.execute(sql)
+
 conect.commit()
 cursor.close()
 conect.close()
