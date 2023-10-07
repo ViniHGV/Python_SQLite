@@ -8,7 +8,7 @@ sql = """
   create table if not exists pedidos(
   notaFiscal integer primary key autoincrement,
   valorTotal numeric,
-  dataRealizacao date,
+  dataPedido date,
   idCliente integer,
   foreign key (idCliente) references clientes(id))
 """
